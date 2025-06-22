@@ -1,0 +1,96 @@
+/* style.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #111, #222);
+    margin: 0;
+  }
+  
+  #score {
+    font-size: 2rem;
+    margin: 20px auto;
+    color: #00ff7f;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.5);
+  }
+  
+  #restartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  #restartBtn {
+    display: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #restartBtn:hover {
+    background-color: #388e3c;
+  }
+  
+  #gameOverMsg {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: red;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  #gameOverMsg.show {
+    opacity: 1;
+  }
+  #gameArea {
+    height: 400px;
+    width: 400px;
+    background-color: #030303;
+    margin: 0;
+    border: 10px solid #CF0F47;
+    position: relative;
+  }
+  
+  .snake {
+    width: 14px;
+    height: 14px;
+    background-color: #4caf50;
+    border-radius: 30%;
+    border: 2px solid #093d0b;
+    position: absolute;
+  }
+  
+  .snake.head {
+    background-color: #1b5e20;
+  }
+  
+  .food {
+    width: 14px;
+    height: 14px;
+    background-color: #CF0F5c;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #CF0F47;
+  }
